@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZackMC-Mods | Minecraft Mods</title>
+<title>ZackMC-Mods</title>
 
 <style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -19,18 +19,12 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at top, #202020 0%, #0b0b0b 45%, #050505 100%);
+    background: #07080a;
     color: white;
-    min-height: 100vh;
+    line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* NAVIGATION */
+/* NAVBAR */
 
 .navbar {
     position: sticky;
@@ -38,16 +32,17 @@ a {
     z-index: 1000;
 
     height: 72px;
-    padding: 0 6%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(5, 5, 5, 0.88);
+    padding: 0 6%;
+
+    background: rgba(7, 8, 10, 0.9);
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid #292c32;
 }
 
 .logo {
@@ -55,7 +50,10 @@ a {
     align-items: center;
     gap: 10px;
 
-    font-size: 21px;
+    color: white;
+    text-decoration: none;
+
+    font-size: 20px;
     font-weight: 900;
 }
 
@@ -71,22 +69,20 @@ a {
 
     border-radius: 9px;
 
-    font-size: 21px;
     font-weight: 900;
-
-    box-shadow: 0 0 25px rgba(242,184,75,.25);
+    font-size: 21px;
 }
 
 .nav-links {
     display: flex;
     gap: 28px;
-
-    color: #a6a6a6;
-    font-size: 14px;
 }
 
 .nav-links a {
-    transition: .2s;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -101,10 +97,12 @@ a {
 
     border-radius: 10px;
 
-    font-weight: 800;
-    font-size: 14px;
+    text-decoration: none;
 
-    transition: .2s;
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: 0.2s;
 }
 
 .nav-download:hover {
@@ -120,34 +118,26 @@ a {
 
     text-align: center;
 
-    padding: 115px 24px 75px;
+    padding: 110px 24px 70px;
 }
 
 .badge {
-    display: inline-block;
-
-    padding: 7px 13px;
-
-    border: 1px solid #4a3b20;
-    border-radius: 999px;
-
-    background: rgba(242,184,75,.07);
-
     color: #f2b84b;
 
     font-size: 11px;
     font-weight: 900;
 
-    letter-spacing: .15em;
+    letter-spacing: 0.16em;
 }
 
 .hero h1 {
-    margin: 25px 0 22px;
+    margin: 22px 0;
 
-    font-size: clamp(48px, 8vw, 90px);
-    line-height: .95;
+    font-size: clamp(50px, 8vw, 90px);
 
-    letter-spacing: -.055em;
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
 }
 
 .hero h1 span {
@@ -158,10 +148,9 @@ a {
     max-width: 680px;
     margin: auto;
 
-    color: #a5a5a5;
+    color: #9ca1aa;
 
     font-size: 18px;
-    line-height: 1.7;
 }
 
 .buttons {
@@ -175,58 +164,66 @@ a {
 }
 
 .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 14px 21px;
 
     border-radius: 11px;
 
-    border: 1px solid #303030;
+    border: 1px solid #303238;
+
+    text-decoration: none;
+
+    color: white;
 
     font-size: 14px;
     font-weight: 800;
 
-    transition: .2s;
+    transition: 0.2s;
 }
 
-.button-primary {
+.primary {
     background: #f2b84b;
     color: #17120a;
 
     border-color: #f2b84b;
 }
 
-.button-primary:hover {
+.primary:hover {
     background: #ffda7c;
     transform: translateY(-2px);
 }
 
-.button-secondary {
-    background: #111111;
+.secondary {
+    background: #111318;
 }
 
-.button-secondary:hover {
-    background: #1c1c1c;
+.secondary:hover {
+    background: #1a1c21;
     transform: translateY(-2px);
 }
 
 .status {
     margin-top: 18px;
 
-    color: #777;
+    color: #70757e;
 
     font-size: 12px;
 }
 
 .status span {
-    color: #6bd38d;
+    color: #69d391;
 }
 
 /* PREVIEW */
 
 .preview {
-    max-width: 700px;
+    max-width: 680px;
     margin: auto;
 
-    padding: 15px 24px 100px;
+    padding: 0 24px 90px;
 }
 
 .minecraft-card {
@@ -234,11 +231,16 @@ a {
 
     text-align: center;
 
-    border: 1px solid #373737;
+    border: 1px solid #373a42;
+
     border-radius: 18px;
 
     background:
-        linear-gradient(145deg, #1b1b1b, #0c0c0c);
+        linear-gradient(
+            145deg,
+            #191c23,
+            #0e1015
+        );
 
     box-shadow:
         0 25px 80px rgba(0,0,0,.6);
@@ -250,20 +252,22 @@ a {
     font-size: 12px;
     font-weight: 900;
 
-    letter-spacing: .15em;
+    letter-spacing: 0.15em;
 }
 
-.fake-money {
-    margin: 10px 0;
+.money {
+    margin: 8px 0;
 
     color: #f2b84b;
 
-    font-size: clamp(45px, 8vw, 72px);
+    font-size: clamp(45px, 8vw, 70px);
+
     font-weight: 900;
 }
 
 .preview-text {
-    color: #707070;
+    color: #70757e;
+
     font-size: 13px;
 }
 
@@ -273,7 +277,7 @@ section {
     max-width: 1100px;
     margin: auto;
 
-    padding: 90px 24px;
+    padding: 85px 24px;
 }
 
 .eyebrow {
@@ -282,74 +286,77 @@ section {
     font-size: 11px;
     font-weight: 900;
 
-    letter-spacing: .16em;
+    letter-spacing: 0.16em;
 }
 
 .section-title {
-    margin: 10px 0 38px;
+    margin: 10px 0 35px;
 
     font-size: 42px;
 
-    letter-spacing: -.04em;
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
 }
 
 /* FEATURES */
 
-.feature-grid {
+.features {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
     gap: 15px;
 }
 
-.feature {
-    padding: 28px;
+.card {
+    padding: 27px;
 
-    background: #111111;
+    background: #111318;
 
-    border: 1px solid #282828;
+    border: 1px solid #292c32;
+
     border-radius: 16px;
 
-    transition: .2s;
+    transition: 0.2s;
 }
 
-.feature:hover {
+.card:hover {
     transform: translateY(-5px);
 
-    border-color: #4c3b20;
+    border-color: #4b3a20;
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,.35);
+        0 15px 45px rgba(0,0,0,.4);
 }
 
-.feature-icon {
-    margin-bottom: 20px;
+.icon {
+    margin-bottom: 18px;
 
     font-size: 27px;
 }
 
-.feature h3 {
-    margin-bottom: 9px;
+.card h3 {
+    margin-bottom: 8px;
 
     font-size: 18px;
 }
 
-.feature p {
+.card p {
     color: #999;
 
     font-size: 14px;
-    line-height: 1.6;
 }
 
 code {
     padding: 3px 7px;
 
-    border-radius: 6px;
-
-    background: #080808;
+    background: #08090b;
 
     color: #f2b84b;
+
+    border-radius: 6px;
 
     font-family: monospace;
 }
@@ -359,35 +366,39 @@ code {
 .commands-section {
     max-width: none;
 
-    background: #0d0d0d;
+    background: #0d0f13;
 
-    border-top: 1px solid #252525;
-    border-bottom: 1px solid #252525;
+    border-top: 1px solid #292c32;
+    border-bottom: 1px solid #292c32;
 }
 
 .commands-container {
     max-width: 1100px;
     margin: auto;
+
+    padding: 85px 24px;
 }
 
 .commands {
     display: grid;
+
     gap: 10px;
 }
 
 .command {
     display: flex;
 
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     gap: 20px;
 
     padding: 18px 20px;
 
-    background: #111111;
+    background: #111318;
 
-    border: 1px solid #292929;
+    border: 1px solid #292c32;
+
     border-radius: 12px;
 }
 
@@ -410,13 +421,14 @@ code {
     padding: 38px;
 
     border: 1px solid #4b3a20;
+
     border-radius: 20px;
 
     background:
         linear-gradient(
             120deg,
             #1b150c,
-            #111111
+            #111318
         );
 
     box-shadow:
@@ -431,17 +443,13 @@ code {
     color: #999;
 
     font-size: 14px;
-    line-height: 1.6;
-}
-
-.download-button {
-    white-space: nowrap;
 }
 
 /* INSTALLATION */
 
 .steps {
     display: grid;
+
     gap: 12px;
 
     list-style: none;
@@ -452,15 +460,15 @@ code {
 
     padding: 20px 20px 20px 65px;
 
-    background: #111111;
+    background: #111318;
 
-    border: 1px solid #282828;
+    border: 1px solid #292c32;
+
     border-radius: 14px;
 
     color: #999;
 
     font-size: 14px;
-    line-height: 1.6;
 }
 
 .step-number {
@@ -492,19 +500,20 @@ code {
 
 .notice {
     max-width: 1050px;
-    margin: 0 auto 80px;
+
+    margin: 0 auto 75px;
 
     padding: 20px;
 
-    border: 1px solid #3b3325;
-    border-radius: 13px;
-
     background: #12100b;
+
+    border: 1px solid #3a3325;
+
+    border-radius: 13px;
 
     color: #aaa;
 
     font-size: 13px;
-    line-height: 1.7;
 }
 
 .notice strong {
@@ -520,14 +529,14 @@ footer {
 
     justify-content: space-between;
 
-    border-top: 1px solid #252525;
+    border-top: 1px solid #292c32;
 
     color: #666;
 
     font-size: 11px;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media (max-width: 850px) {
 
@@ -535,30 +544,33 @@ footer {
         display: none;
     }
 
-    .feature-grid {
+    .features {
         grid-template-columns: 1fr 1fr;
     }
 
     .download-box {
         flex-direction: column;
+
         align-items: flex-start;
     }
 
     .command {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 8px;
     }
 }
 
 @media (max-width: 520px) {
 
-    .hero {
-        padding-top: 80px;
+    .features {
+        grid-template-columns: 1fr;
     }
 
-    .feature-grid {
-        grid-template-columns: 1fr;
+    .hero {
+        padding-top: 80px;
     }
 
     .hero h1 {
@@ -571,6 +583,7 @@ footer {
 
     footer {
         flex-direction: column;
+
         gap: 10px;
     }
 }
@@ -583,65 +596,104 @@ footer {
 
 <header class="navbar">
 
-    <a href="#home" class="logo">
-        <span class="logo-box">Z</span>
-        ZackMC-Mods
-    </a>
+<a href="#" class="logo">
 
-    <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#commands">Befehle</a>
-        <a href="#download">Download</a>
-        <a href="#install">Installation</a>
-    </nav>
+<span class="logo-box">
+Z
+</span>
 
-    <a href="#download" class="nav-download">
-        Download
-    </a>
+ZackMC-Mods
+
+</a>
+
+<nav class="nav-links">
+
+<a href="#features">
+Features
+</a>
+
+<a href="#commands">
+Befehle
+</a>
+
+<a href="#download">
+Download
+</a>
+
+<a href="#install">
+Installation
+</a>
+
+</nav>
+
+<a
+href="#download"
+class="nav-download">
+
+Download
+
+</a>
 
 </header>
 
 
 <!-- HERO -->
 
-<main id="home">
+<main>
 
 <section class="hero">
 
-    <div class="badge">
-        FABRIC • MINECRAFT JAVA • 1.21.11
-    </div>
+<div class="badge">
+FABRIC • MINECRAFT JAVA • 1.21.11
+</div>
 
-    <h1>
-        ZackMC-Mods.<br>
-        <span>Deine Mods.</span>
-    </h1>
+<h1>
 
-    <p>
-        Willkommen bei ZackMC-Mods.
-        Hier findest du unsere Minecraft-Mods,
-        darunter FakeBalance und FakePayments
-        für Fabric.
-    </p>
+ZackMC-Mods.<br>
 
-    <div class="buttons">
+<span>
+Deine Mods.
+</span>
 
-        <a href="#download"
-           class="button button-primary">
-            ↓ Mod herunterladen
-        </a>
+</h1>
 
-        <a href="#commands"
-           class="button button-secondary">
-            Befehle ansehen
-        </a>
+<p>
 
-    </div>
+Willkommen bei ZackMC-Mods.
 
-    <div class="status">
-        <span>●</span>
-        Client-only • Keine echten Zahlungen
-    </div>
+Hier findest du Minecraft-Mods
+für Fabric, darunter FakeBalance
+und FakePayments.
+
+</p>
+
+<div class="buttons">
+
+<a
+href="#download"
+class="button primary">
+
+↓ Mod herunterladen
+
+</a>
+
+<a
+href="#commands"
+class="button secondary">
+
+Befehle ansehen
+
+</a>
+
+</div>
+
+<div class="status">
+
+<span>●</span>
+
+Client-only • Keine echten Zahlungen
+
+</div>
 
 </section>
 
@@ -650,21 +702,27 @@ footer {
 
 <div class="preview">
 
-    <div class="minecraft-card">
+<div class="minecraft-card">
 
-        <div class="minecraft-title">
-            ZACKMC-MODS • FAKEBALANCE
-        </div>
+<div class="minecraft-title">
 
-        <div class="fake-money">
-            $1,000,000
-        </div>
+ZACKMC-MODS • FAKEBALANCE
 
-        <div class="preview-text">
-            Nur lokale Anzeige
-        </div>
+</div>
 
-    </div>
+<div class="money">
+
+$1,000,000
+
+</div>
+
+<div class="preview-text">
+
+Nur lokale Anzeige
+
+</div>
+
+</div>
 
 </div>
 
@@ -673,177 +731,190 @@ footer {
 
 <section id="features">
 
-    <div class="eyebrow">
-        FEATURES
-    </div>
+<div class="eyebrow">
+FEATURES
+</div>
 
-    <h2 class="section-title">
-        Was kann die Mod?
-    </h2>
+<h2 class="section-title">
+Was kann die Mod?
+</h2>
 
-    <div class="feature-grid">
+<div class="features">
 
-        <article class="feature">
+<article class="card">
 
-            <div class="feature-icon">
-                💰
-            </div>
+<div class="icon">
+💰
+</div>
 
-            <h3>
-                FakeBalance
-            </h3>
+<h3>
+FakeBalance
+</h3>
 
-            <p>
-                Setze einen beliebigen Betrag,
-                der nur auf deinem Client angezeigt wird.
-            </p>
+<p>
+Setze einen beliebigen Betrag,
+der nur lokal angezeigt wird.
+</p>
 
-        </article>
-
-
-        <article class="feature">
-
-            <div class="feature-icon">
-                💸
-            </div>
-
-            <h3>
-                FakePayments
-            </h3>
-
-            <p>
-                Simuliere Zahlungen lokal mit
-                <code>/pay Name Betrag</code>.
-            </p>
-
-        </article>
+</article>
 
 
-        <article class="feature">
+<article class="card">
 
-            <div class="feature-icon">
-                👁️
-            </div>
+<div class="icon">
+💸
+</div>
 
-            <h3>
-                Unauffällig
-            </h3>
+<h3>
+FakePayments
+</h3>
 
-            <p>
-                Die Mod zeigt keine permanente
-                zusätzliche Anzeige auf deinem Bildschirm.
-            </p>
+<p>
+Simuliere eine Zahlung mit
+<code>/pay Name Betrag</code>.
+</p>
 
-        </article>
+</article>
 
 
-        <article class="feature">
+<article class="card">
 
-            <div class="feature-icon">
-                🛡️
-            </div>
+<div class="icon">
+👁️
+</div>
 
-            <h3>
-                Client-only
-            </h3>
+<h3>
+Unauffällig
+</h3>
 
-            <p>
-                Es wird kein echtes Guthaben verändert
-                und kein echtes Geld übertragen.
-            </p>
+<p>
+Keine permanente zusätzliche
+Anzeige auf dem Bildschirm.
+</p>
 
-        </article>
+</article>
 
-    </div>
+
+<article class="card">
+
+<div class="icon">
+🛡️
+</div>
+
+<h3>
+Client-only
+</h3>
+
+<p>
+Kein echtes Guthaben wird
+verändert oder übertragen.
+</p>
+
+</article>
+
+</div>
 
 </section>
 
 
 <!-- COMMANDS -->
 
-<section id="commands"
-         class="commands-section">
+<section
+id="commands"
+class="commands-section">
 
-    <div class="commands-container">
+<div class="commands-container">
 
-        <div class="eyebrow">
-            BEFEHLE
-        </div>
+<div class="eyebrow">
+BEFEHLE
+</div>
 
-        <h2 class="section-title">
-            Alles über den Chat.
-        </h2>
+<h2 class="section-title">
+Alles über den Chat.
+</h2>
 
-        <div class="commands">
+<div class="commands">
 
-            <div class="command">
-                <code>
-                    /fakebalance 1000000
-                </code>
+<div class="command">
 
-                <span>
-                    Fake-Guthaben setzen
-                </span>
-            </div>
+<code>
+/fakebalance 1000000
+</code>
 
+<span>
+Fake-Guthaben setzen
+</span>
 
-            <div class="command">
-                <code>
-                    /fakebalance off
-                </code>
-
-                <span>
-                    Fake-Anzeige deaktivieren
-                </span>
-            </div>
+</div>
 
 
-            <div class="command">
-                <code>
-                    /fakebalance status
-                </code>
+<div class="command">
 
-                <span>
-                    Status anzeigen
-                </span>
-            </div>
+<code>
+/fakebalance off
+</code>
 
+<span>
+Fake-Anzeige deaktivieren
+</span>
 
-            <div class="command">
-                <code>
-                    /fakebalance fakepayments on
-                </code>
-
-                <span>
-                    FakePayments aktivieren
-                </span>
-            </div>
+</div>
 
 
-            <div class="command">
-                <code>
-                    /pay Max Mustermann 10000
-                </code>
+<div class="command">
 
-                <span>
-                    Zahlung lokal simulieren
-                </span>
-            </div>
+<code>
+/fakebalance status
+</code>
+
+<span>
+Status anzeigen
+</span>
+
+</div>
 
 
-            <div class="command">
-                <code>
-                    /fakebalance fakepayments off
-                </code>
+<div class="command">
 
-                <span>
-                    FakePayments deaktivieren
-                </span>
-            </div>
+<code>
+/fakebalance fakepayments on
+</code>
 
-        </div>
+<span>
+FakePayments aktivieren
+</span>
 
-    </div>
+</div>
+
+
+<div class="command">
+
+<code>
+/pay Max Mustermann 10000
+</code>
+
+<span>
+Zahlung lokal simulieren
+</span>
+
+</div>
+
+
+<div class="command">
+
+<code>
+/fakebalance fakepayments off
+</code>
+
+<span>
+FakePayments deaktivieren
+</span>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -852,43 +923,52 @@ footer {
 
 <section id="download">
 
-    <div class="download-box">
+<div class="download-box">
 
-        <div>
+<div>
 
-            <div class="eyebrow">
-                DOWNLOAD
-            </div>
+<div class="eyebrow">
+DOWNLOAD
+</div>
 
-            <h2 class="section-title"
-                style="margin-bottom:0;">
-                ZackMC-Mods 1.21.11
-            </h2>
+<h2
+class="section-title"
+style="margin-bottom:0">
 
-            <p>
-                Lade die aktuelle ZackMC-Mods-JAR
-                herunter und installiere sie in deinem
-                Fabric-Minecraft.
-            </p>
+ZackMC-Mods 1.21.11
 
-        </div>
+</h2>
 
-        <!--
-            WICHTIG:
-            Die Datei muss im gleichen Ordner
-            wie diese index.html liegen.
-        -->
+<p>
 
-        <a
-            href="ZackMC-Mods-1.21.11.jar"
-            download
-            class="button button-primary download-button">
+Lade hier die aktuelle
+ZackMC-Mods-JAR herunter.
 
-            ↓ ZackMC-Mods herunterladen
+</p>
 
-        </a>
+</div>
 
-    </div>
+
+<!--
+WICHTIG:
+Diese Datei muss genau so heißen:
+
+ZackMC-Mods-1.21.11.jar
+
+und im gleichen Ordner
+wie diese index.html liegen.
+-->
+
+<a
+href="./ZackMC-Mods-1.21.11.jar"
+download="ZackMC-Mods-1.21.11.jar"
+class="button primary">
+
+↓ JAR herunterladen
+
+</a>
+
+</div>
 
 </section>
 
@@ -897,95 +977,94 @@ footer {
 
 <section id="install">
 
-    <div class="eyebrow">
-        INSTALLATION
-    </div>
+<div class="eyebrow">
+INSTALLATION
+</div>
 
-    <h2 class="section-title">
-        In 4 Schritten startklar.
-    </h2>
+<h2 class="section-title">
+In 4 Schritten startklar.
+</h2>
 
-    <ol class="steps">
-
-        <li class="step">
-
-            <span class="step-number">
-                1
-            </span>
-
-            <strong>
-                Fabric installieren
-            </strong>
-
-            <br>
-
-            Installiere Fabric für Minecraft
-            1.21.11 und starte Minecraft einmal
-            mit dem Fabric-Profil.
-
-        </li>
+<ol class="steps">
 
 
-        <li class="step">
+<li class="step">
 
-            <span class="step-number">
-                2
-            </span>
+<span class="step-number">
+1
+</span>
 
-            <strong>
-                Mod herunterladen
-            </strong>
+<strong>
+Fabric installieren
+</strong>
 
-            <br>
+<br>
 
-            Klicke oben auf den Download-Button
-            und lade die ZackMC-Mods-JAR herunter.
+Installiere Fabric für
+Minecraft 1.21.11.
 
-        </li>
-
-
-        <li class="step">
-
-            <span class="step-number">
-                3
-            </span>
-
-            <strong>
-                JAR in den Mods-Ordner
-            </strong>
-
-            <br>
-
-            Verschiebe die JAR in:
-
-            <br><br>
-
-            <code>
-                %appdata%\.minecraft\mods
-            </code>
-
-        </li>
+</li>
 
 
-        <li class="step">
+<li class="step">
 
-            <span class="step-number">
-                4
-            </span>
+<span class="step-number">
+2
+</span>
 
-            <strong>
-                Minecraft starten
-            </strong>
+<strong>
+Mod herunterladen
+</strong>
 
-            <br>
+<br>
 
-            Starte Minecraft über dein
-            Fabric-Profil und benutze anschließend
-            die Mod-Befehle im Chat.
+Klicke auf den Download-Button
+und lade die JAR herunter.
 
-        </li>
+</li>
 
-    </ol>
+
+<li class="step">
+
+<span class="step-number">
+3
+</span>
+
+<strong>
+JAR verschieben
+</strong>
+
+<br>
+
+Verschiebe die Datei in:
+
+<br><br>
+
+<code>
+%appdata%\.minecraft\mods
+</code>
+
+</li>
+
+
+<li class="step">
+
+<span class="step-number">
+4
+</span>
+
+<strong>
+Minecraft starten
+</strong>
+
+<br>
+
+Starte Minecraft mit deinem
+Fabric-Profil.
+
+</li>
+
+</ol>
 
 </section>
 
@@ -994,18 +1073,20 @@ footer {
 
 <div class="notice">
 
-    <strong>Wichtig:</strong>
+<strong>
+Wichtig:
+</strong>
 
-    ZackMC-Mods/FakeBalance/FakePayments
-    sind clientseitige Anzeige- und
-    Simulationsfunktionen.
+FakeBalance und FakePayments
+sind clientseitige Anzeige- und
+Simulationsfunktionen.
 
-    Es wird kein echtes Guthaben verändert,
-    kein Geld übertragen und keine echte
-    Server-Transaktion ausgeführt.
+Es wird kein echtes Guthaben
+verändert und kein echtes Geld
+übertragen.
 
-    Die Mod ist kein offizielles Produkt von
-    Mojang, Microsoft oder DonutSMP.
+Nicht offiziell mit Mojang,
+Microsoft oder DonutSMP verbunden.
 
 </div>
 
@@ -1016,13 +1097,13 @@ footer {
 
 <footer>
 
-    <div>
-        © 2026 ZackMC-Mods
-    </div>
+<div>
+© 2026 ZackMC-Mods
+</div>
 
-    <div>
-        Minecraft Java • Fabric • 1.21.11
-    </div>
+<div>
+Minecraft Java • Fabric • 1.21.11
+</div>
 
 </footer>
 
